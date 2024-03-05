@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Services\Quotes\Responses;
+namespace App\Services\QuotesGarden\Responses;
 
 use Illuminate\Http\Client\Response;
-use App\Services\Quotes\Entities\Pagination;
-use App\Services\Quotes\Entities\Quote;
+use App\Services\QuotesGarden\Entities\Pagination;
+use App\Services\QuotesGarden\Entities\Quote;
 
 class QuotesPage
 {

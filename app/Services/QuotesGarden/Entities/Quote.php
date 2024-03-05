@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Services\Quotes\Entities;
+namespace App\Services\QuotesGarden\Entities;
 
 class Quote
 {
@@ -44,5 +44,16 @@ class Quote
     {
         $data = (array)json_decode( $param );
         return new Quote( ...$data );
+    }
+
+    public static function fromModel( $model ): Quote
+    {
+        return new Quote(
+            $model->garden_id,
+            $model->text,
+            $model->author,
+            $model->genre,
+            'x'
+        );
     }
 }

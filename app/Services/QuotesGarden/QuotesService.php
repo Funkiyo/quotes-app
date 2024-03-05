@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Services\Quotes;
+namespace App\Services\QuotesGarden;
 
 use Illuminate\Support\Facades\Http;
-use App\Services\Quotes\Responses\QuotesPage;
+use App\Services\QuotesGarden\Responses\QuotesPage;
 
 class QuotesService
 {

@@ -2,7 +2,7 @@
 
 namespace Tests\Unit;
 
-use App\Services\Quotes\Entities\Quote;
+use App\Services\QuotesGarden\Entities\Quote;
 use PHPUnit\Framework\TestCase;
 
 class QuoteTest extends TestCase

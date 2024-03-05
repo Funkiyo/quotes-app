@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Services\Quotes\Entities;
+namespace App\Services\QuotesGarden\Entities;
 
 class Pagination
 {

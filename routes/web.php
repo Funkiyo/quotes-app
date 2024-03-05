@@ -29,4 +29,8 @@ Route::middleware( [
     Route::get( '/quotes', function () {
         return view( 'quotes' );
     } )->name('quotes');
+
+    Route::get( '/favorites', function () {
+        return view( 'favorites' );
+    } )->name('favorites');
 } );

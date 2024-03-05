@@ -2,7 +2,7 @@
 
 namespace Tests\Feature;
 
-use App\Services\Quotes\QuotesService;
+use App\Services\QuotesGarden\QuotesService;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;

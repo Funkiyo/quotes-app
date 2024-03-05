@@ -22,6 +22,12 @@
                         {{ __('Quotes') }}
                     </x-nav-link>
                 </div>
+
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link href="{{ route('favorites') }}" :active="request()->routeIs('favorites')">
+                        {{ __('Favorites') }}
+                    </x-nav-link>
+                </div>
             </div>
 
             <div class="hidden sm:flex sm:items-center sm:ms-6">
