@@ -10,10 +10,21 @@ class QuotesListing extends Component
 {
     protected QuotesPage $quotesPage;
 
+    protected QuotesService|null $service = null;
+
+    public function __construct()
+    {
+        $this->service = new QuotesService;
+    }
+
     public function mount()
     {
-        $quotesService = new QuotesService;
-        $this->quotesPage = $quotesService->getQuotesPage();
+        $this->goToPage( 1 );
+    }
+
+    public function goToPage( int $page )
+    {
+        $this->quotesPage = $this->service->getQuotesPage( $page );
     }
 
     public function render()
