@@ -35,25 +35,8 @@ class Quote
         return $this->quoteGenre;
     }
 
-    public function toParam(): string
+    public function toJson(): string
     {
         return json_encode( (array)$this );
-    }
-
-    public static function fromParam( string $param ): Quote
-    {
-        $data = (array)json_decode( $param );
-        return new Quote( ...$data );
-    }
-
-    public static function fromModel( $model ): Quote
-    {
-        return new Quote(
-            $model->garden_id,
-            $model->text,
-            $model->author,
-            $model->genre,
-            'x'
-        );
     }
 }

@@ -2,6 +2,7 @@
 
 namespace Tests\Unit;
 
+use App\Services\QuotesGarden\Adapters\QuoteAdapter;
 use App\Services\QuotesGarden\Entities\Quote;
 use PHPUnit\Framework\TestCase;
 
@@ -10,7 +11,7 @@ class QuoteTest extends TestCase
     /**
      * A basic unit test example.
      */
-    public function test_example(): void
+    public function test_adapter(): void
     {
         $id = '1234';
         $text = 'Quote text';
@@ -19,9 +20,9 @@ class QuoteTest extends TestCase
         $v = '1';
 
         $quote = new Quote( $id, $text, $author, $genre, $v );
-        $param = $quote->toParam();
+        $param = $quote->toJson();
 
-        $clonedQuote = Quote::fromParam( $param );
+        $clonedQuote = QuoteAdapter::fromParam( $param );
 
         $this->assertEquals( $quote->getId(), $clonedQuote->getId() );
         $this->assertEquals( $quote->getText(), $clonedQuote->getText() );

@@ -3,7 +3,7 @@
     <h2 class="italic text-blue-darkest leading-normal">
         @if(!$isFavorite)
             <button
-                wire:click="addToFavorites({{$quote->toParam()}})"
+                wire:click="addToFavorites({{$quote->toJson()}})"
                 type="button" class="focus:outline-none text-white bg-gray-700 hover:bg-gray-800
                 font-medium rounded-lg text-sm px-1 py-1 dark:bg-gray-600
                 dark:hover:bg-gray-700">
@@ -16,7 +16,7 @@
             &nbsp;
         @else
             <button
-                wire:click="removeFromFavorites({{$quote->toParam()}})"
+                wire:click="removeFromFavorites({{$quote->toJson()}})"
                 type="button" class="focus:outline-none text-white bg-purple-700 hover:bg-purple-800
                 font-medium rounded-lg text-sm px-1 py-1 dark:bg-purple-600
                 dark:hover:bg-purple-700">
