@@ -70,7 +70,7 @@ class QuotesListing extends Component
 
     public function render()
     {
-        return view( 'livewire.quotes-listing' )->with( [
+        return view( 'livewire.quotes.listing' )->with( [
             'quotesPage' => $this->quotesPage,
         ] );
     }
