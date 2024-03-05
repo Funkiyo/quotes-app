@@ -20,19 +20,16 @@ class QuotesListing extends Component
         $this->service = new QuotesService;
     }
 
-    public function mount()
-    {
-        $this->goToPage( $this->page );
-    }
-
     public function goToPage( int $page )
     {
-        $this->quotesPage = $this->service->getQuotesPage( $page );
         $this->page = $page;
     }
 
     public function render()
     {
+        //@TODO Unnecessary query but bypasses "Typed property App\Livewire\QuotesListing::$quotesPage must not be accessed before initialization"
+        $this->quotesPage = $this->service->getQuotesPage( $this->page );
+
         return view( 'livewire.quotes.listing' )->with( [
             'quotesPage' => $this->quotesPage,
         ] );

@@ -22,12 +22,6 @@ trait LivewireFavoriteActions
         if ( ! $user->favoriteQuotes()->where( 'quote_id', $quoteModel->id )->exists() ) {
             $user->favoriteQuotes()->attach( $quoteModel->id );
         }
-
-        // Very stinky fix
-        //@TODO Unnecessary query but bypasses "Typed property App\Livewire\QuotesListing::$quotesPage must not be accessed before initialization"
-        if(isset($this->page)){
-            $this->goToPage( $this->page );
-        }
     }
 
     public function removeFromFavorites( array $quoteParam )
@@ -41,10 +35,5 @@ trait LivewireFavoriteActions
             $user->favoriteQuotes()->detach( $quoteModel->id );
         }
 
-        // Very stinky fix
-        //@TODO Unnecessary query but bypasses "Typed property App\Livewire\QuotesListing::$quotesPage must not be accessed before initialization"
-        if(isset($this->page)){
-            $this->goToPage( $this->page );
-        }
     }
 }
