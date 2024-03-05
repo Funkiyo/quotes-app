@@ -5,7 +5,7 @@ namespace App\Livewire;
 use App\Models\Quote as QuoteModel;
 use App\Services\QuotesGarden\Entities\Quote;
 
-trait LivewireFavoriteActions
+trait FavoriteActions
 {
     public function addToFavorites( array $quoteParam )
     {

@@ -8,7 +8,7 @@ use Livewire\Component;
 
 class QuotesListing extends Component
 {
-    use LivewireFavoriteActions;
+    use FavoriteActions;
     protected QuotesPage $quotesPage;
 
     protected QuotesService|null $service = null;

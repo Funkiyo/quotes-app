@@ -9,7 +9,7 @@ use Livewire\WithPagination;
 class QuotesFavorites extends Component
 {
     use WithPagination;
-    use LivewireFavoriteActions;
+    use FavoriteActions;
 
     public function render()
     {
