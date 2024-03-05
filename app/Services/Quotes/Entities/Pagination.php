@@ -41,7 +41,7 @@ class Pagination
         return $this->nextPage;
     }
 
-    public function getTotalPage(): int
+    public function getTotalPages(): int
     {
         return $this->totalPages;
     }

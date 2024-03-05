@@ -12,7 +12,7 @@ class QuotesService
 
     const string VERSION = 'v3/';
 
-    protected $limit = 10;
+    protected $limit = 9;
 
     public function __construct()
     {

@@ -28,5 +28,5 @@ Route::middleware( [
 
     Route::get( '/quotes', function () {
         return view( 'quotes' );
-    } );
+    } )->name('quotes');
 } );
